@@ -1,0 +1,14 @@
+@import "~/node_modules/bootstrap/scss/variables";
+
+$btn-border-radius: .65rem;
+$btn-border-width: 2px;
+$btn-font-size: .75rem;
+$btn-font-weight: $font-weight-bold;
+
+.btn-outline-tertiary {
+    color: white !important;
+}
+
+.rounded-xl {
+    border-radius: .65rem;
+}

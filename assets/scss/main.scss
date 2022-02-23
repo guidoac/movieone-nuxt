@@ -1,0 +1,23 @@
+@import "./typography.scss";
+@import "./colors.scss";
+@import "./generic.scss";
+
+textarea, select, input, button {
+    outline: none;
+    -webkit-appearance: none;
+    border: none;
+}
+
+a {
+    text-decoration: none !important;
+    color: #e9ecef !important;
+    transition: color .3s ease;
+
+    &:hover {
+        @apply font-weight-bold;
+        color: white !important;
+    }
+}
+
+// always import bootstrap last
+@import "~/node_modules/bootstrap/scss/bootstrap";

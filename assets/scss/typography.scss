@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Ruslan';
+    src: url('../fonts/RuslanDisplay-Regular.ttf') format('truetype');
+}
+
+$font-family-base: "Poppins";
+$font-family-secondary: "Ruslan";
+
+.font-family-secondary {
+    font-family: $font-family-secondary;
+}
+
+/* Overriding styles */
+
+::-webkit-input-placeholder {
+    font-size: 13px !important;
+ }
+ 
+ :-moz-placeholder { /* Firefox 18- */
+       font-size: 13px !important;
+ }
+ ::-moz-placeholder {  /* Firefox 19+ */
+       font-size: 13px !important;
+ }
+
+ // font sizes
+.h6 {
+    font-size: 1rem;
+}
+
+ .h7 {
+    font-size: .8rem;
+ }
+
+ .h8 {
+    font-size: .7rem;
+ }
+
+ .h9 {
+    font-size: .6rem;
+ }

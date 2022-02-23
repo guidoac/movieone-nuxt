@@ -1,0 +1,23 @@
+@import "~/node_modules/bootstrap/scss/functions";
+@import "~/node_modules/bootstrap/scss/mixins";
+@import "~/node_modules/bootstrap/scss/variables";
+
+.gradient-x-secondary {
+    @include gradient-x($gray-900, $secondary);
+}
+
+$primary: #FD7014;
+$primary-dark: #301f14;
+$secondary: #202020;
+$tertiary: #ced4da;
+$contrast: #FF055F;
+$black: #161616;
+
+$theme-colors: (
+    "primary": $primary,
+    "primary-dark": $primary-dark,
+    "secondary": $secondary,
+    "contrast": $contrast,
+    "black": $black,
+    "tertiary": $tertiary
+);
