@@ -1,4 +1,4 @@
-export default function (context) {
-    context.$axios.setBaseURL(process.env.moviedb_baseurl);
-    context.$axios.setToken(process.env.moviedb_api_key, 'Bearer');
+export default function ({ $axios }) {
+    $axios.setHeader('Authorization', `Bearer ${process.env.moviedb_token_read}`);
+    $axios.setHeader('Content-Type', 'application/json;charset=utf-8');
 }

@@ -1,5 +1,5 @@
 export const state = () => ({
-    current_trending: []
+    current_trending: {}
 })
 
 export const mutations = {
@@ -15,7 +15,9 @@ export const getters = {
 }
 
 export const actions = {
-    async fetchTrending (context, params = { mediaType: 'all', time: 'week' }) {
+    async fetchTrending ({ commit }, params = { mediaType: 'all', time: 'week' }) {
         const res = await this.$axios.$get(`/trending/${params.mediaType}/${params.time}`);
+        
+        commit('SET_TRENDING', res.results);
     }
 }
