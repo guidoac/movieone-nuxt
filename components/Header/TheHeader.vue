@@ -34,7 +34,7 @@
                 </NuxtLink>
             </div>
 
-            <div class="row">
+            <div class="row h7">
                 <BaseButton
                    class="px-4 py-2 rounded-xl"
                    label="Sign in"
@@ -42,7 +42,7 @@
                 />
 
                 <BaseButton
-                   class="px-4 py-2 ml-3 rounded-xl"
+                   class="px-4 py-2 ml-3 rounded-xl h7"
                    label="Register"
                 />
             </div>

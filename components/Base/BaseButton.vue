@@ -1,8 +1,10 @@
 <template>
-    <b-button 
+    <b-button
         :variant="variant"
-    >
+    >   
+        <slot name="first-icon" />
         {{ label }}
+        <slot name="second-icon" />
     </b-button>
 </template>
 
@@ -26,5 +28,11 @@
 </script>
 
 <style lang="scss" scoped>
+.btn-outline-tertiary {
+    &:hover {
+        color: #202020 !important;
+    }
 
+    border-color: #ced4da60;
+}
 </style>
