@@ -1,3 +1,5 @@
-export default function ({ store }) {
-    store.dispatch('trending/fetchTrending')
+export default async function ({ store }) {
+    await store.dispatch('trending/fetchTrending');
+    await store.dispatch('genres/fetchGenres');
+    await store.dispatch('countries/fetchCountries');
 }

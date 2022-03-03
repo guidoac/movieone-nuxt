@@ -22,7 +22,9 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '~/plugins/http' },
-    { src: '~/plugins/seed', mode: 'client' }
+    { src: '~/plugins/seed' },
+    { src: '~/plugins/utils' },
+    { src: '~/plugins/filters' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -39,7 +41,8 @@ export default {
   fontawesome: {
     icons: {
       solid: true,
-      brands: true
+      brands: true,
+      regular: true
     }
   },
 
@@ -74,6 +77,8 @@ export default {
     moviedb_api_key: process.env.MOVIEDB_API_KEY,
     moviedb_token_read: process.env.MOVIEDB_TOKEN_READ,
     moviedb_baseurl: process.env.MOVIEDB_BASEURL,
+    moviedb_poster_baseurl: process.env.MOVIEDB_POSTER_BASEURL,
+    moviedb_backdrop_baseurl: process.env.MOVIEDB_BACKDROP_BASEURL,
   },
 
   // Middlewares
