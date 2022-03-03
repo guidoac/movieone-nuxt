@@ -2,7 +2,7 @@
 
 $btn-border-radius: .65rem;
 $btn-border-width: 2px;
-$btn-font-size: .75rem;
+$btn-font-size: inherit;
 $btn-font-weight: $font-weight-bold;
 
 .btn-outline-tertiary {
@@ -11,4 +11,8 @@ $btn-font-weight: $font-weight-bold;
 
 .rounded-xl {
     border-radius: .65rem;
+}
+
+.opacity-50 {
+    opacity: 0.5;
 }
