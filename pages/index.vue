@@ -63,7 +63,6 @@ import { mapGetters } from 'vuex';
 
 import MainBanner from '~/components/Home/MainBanner';
 import BaseButton from '~/components/Base/BaseButton';
-import Helper from '~/mixins/helper';
 import RecentWatched from '~/components/Sliders/RecentWatched';
 
 export default {
@@ -74,8 +73,6 @@ export default {
         BaseButton,
         RecentWatched,
     },
-
-    mixins: [Helper],
 
     computed: {
         ...mapGetters({

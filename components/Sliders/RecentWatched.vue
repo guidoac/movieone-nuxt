@@ -59,10 +59,13 @@ export default {
 .upper-dots {
     top: -2rem;
     right: 2rem;
+    cursor: pointer;
 
-    & .slick-active div {
-        background: white;
-        opacity: 100%;
+    .slick-active {
+        div {
+            background: white;
+            opacity: 100%;
+        }
     }
 }
 

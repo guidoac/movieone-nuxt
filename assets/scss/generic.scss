@@ -30,6 +30,10 @@ $spacers: map-merge(
 );
 
 // border radius
+.rounded-lg {
+    border-radius: .5rem;
+}
+
 .rounded-xl {
     border-radius: .65rem;
 }
