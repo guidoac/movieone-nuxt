@@ -11,6 +11,7 @@ $primary-dark: #301f14;
 $secondary: #202020;
 $tertiary: #ced4da;
 $contrast: #FF055F;
+$contrast-secondary: #080d33;
 $black: #161616;
 
 $theme-colors: (
@@ -19,5 +20,6 @@ $theme-colors: (
     "secondary": $secondary,
     "contrast": $contrast,
     "black": $black,
-    "tertiary": $tertiary
+    "tertiary": $tertiary,
+    "contrast-secondary": $contrast-secondary
 );
