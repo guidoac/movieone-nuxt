@@ -30,7 +30,6 @@ export const actions = {
         const res = await this.$axios.$get(`/trending/${params.mediaType}/${params.time}`);
         const chosen = _.sample(res.results);
 
-        console.log(chosen)
         commit('SET_TRENDING', res.results);
         commit('SET_RANDOM_TRENDING', chosen);
     }

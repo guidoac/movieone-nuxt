@@ -2,7 +2,7 @@
     <div>
         <div class="position-relative">
             <MainBanner :data="random_trending"/>
-            <div class="container position-absolute">
+            <div class="container position-absolute w-100">
                 <div class="meta-info">
                     <div class="d-flex flex-column text-tertiary mb-5">
                         <div class="d-flex justify-content-between mb-5 w-75">
@@ -52,6 +52,7 @@
                         />
                     </div>
                 </div>
+                <RecentWatched />
             </div>
         </div>
     </div>
@@ -63,6 +64,7 @@ import { mapGetters } from 'vuex';
 import MainBanner from '~/components/Home/MainBanner';
 import BaseButton from '~/components/Base/BaseButton';
 import Helper from '~/mixins/helper';
+import RecentWatched from '~/components/Sliders/RecentWatched';
 
 export default {
     name: 'IndexPage',
@@ -70,6 +72,7 @@ export default {
     components: {
         MainBanner,
         BaseButton,
+        RecentWatched,
     },
 
     mixins: [Helper],
@@ -84,9 +87,13 @@ export default {
 
 <style lang="scss" scoped>
 .container {
+    z-index: 20;
     top: 15%;
     left: 10%;
-    z-index: 20;
+}
+
+.meta-info {
     width: 30%;
+    margin-bottom: 7rem;
 }
 </style>
