@@ -25,6 +25,7 @@ export default {
     { src: '~/plugins/seed' },
     { src: '~/plugins/utils' },
     { src: '~/plugins/filters' },
+    { src: '~/plugins/components', mode: 'client' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

@@ -1,6 +1,7 @@
 @import "./typography.scss";
 @import "./colors.scss";
 @import "./generic.scss";
+@import "~/node_modules/vue-slick-carousel/dist/vue-slick-carousel.css";
 
 textarea, select, input, button {
     outline: none;
@@ -17,6 +18,10 @@ a {
         @apply font-weight-bold;
         color: white !important;
     }
+}
+
+ul {
+    list-style-type: none;
 }
 
 // always import bootstrap last
