@@ -17,7 +17,7 @@ export default {
          * @returns {string}
          */
         extractGenres (media) {
-            if (media && media.genre_ids.length > 0) {
+            if (media && media.genre_ids?.length > 0) {
                 let result = {}
 
                 media.genre_ids.forEach(genre => {

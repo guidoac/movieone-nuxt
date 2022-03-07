@@ -1,25 +1,41 @@
+import _ from 'lodash';
+
 export const state = () => ({
-    current_discover: []
+    discover_tv: [],
+
+    discover_movie: [],
 })
 
 export const mutations = {
-    'SET_DISCOVER' (state, data) {
-        state.current_discover = data;
+    'SET_DISCOVER_TV' (state, data) {
+        state.discover_tv = data;
+    },
+
+    'SET_DISCOVER_MOVIE' (state, data) {
+        state.discover_movie = data;
     },
 }
 
 export const getters = {
     current_discover_all (state) {
-        return state.current_discover;
+        return state.discover_movie.concat(state.discover_tv);
     },
 
-    current_discover_limit: (state) => (limit) => {
-        return state.current_discover.slice(0, limit);
+    current_discover_limit: (state, getters) => (limit) => {
+        return _.sampleSize(getters.current_discover_all, limit)
+    },
+
+    current_discover_tv: (state, getters) => {
+        return state.discover_tv;
+    },
+
+    current_discover_movie: (state, getters) => {
+        return state.discover_movie;
     },
 }
 
 export const actions = {
-    async fetchDiscover ({ commit, state }) {
+    async fetchDiscoverMovie ({ commit, state }) {
         const params = {
             language: 'en-US',
             sort_by: 'popularity.desc',
@@ -31,6 +47,29 @@ export const actions = {
 
         const res = await this.$axios.$get('/discover/movie', { params });
 
-        commit('SET_DISCOVER', res.results);
+        const final = _.map(res.results, (media) => { 
+            return _.extend({}, media, { type: 'movie' });
+        });
+
+        commit('SET_DISCOVER_MOVIE', final);
+    },
+
+    async fetchDiscoverTV ({ commit, state }) {
+        const params = {
+            language: 'en-US',
+            sort_by: 'popularity.desc',
+            include_adult: false,
+            include_video: false,
+            page: 1,
+            with_watch_monetization_types: 'flatrate'
+        };
+
+        const res = await this.$axios.$get('/discover/tv', { params });
+
+        const final = _.map(res.results, (media) => { 
+            return _.extend({}, media, { type: 'tv' });
+        });
+
+        commit('SET_DISCOVER_TV', final);
     }
 }

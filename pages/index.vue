@@ -5,7 +5,7 @@
             <div class="container position-absolute w-100">
                 <div class="meta-info">
                     <div class="d-flex flex-column text-tertiary mb-5">
-                        <div class="d-flex justify-content-between mb-5 w-75">
+                        <div class="d-flex justify-content-between mb-5">
                             <div class="text-primary">
                                 {{ extractGenres(random_trending) }}
                             </div>

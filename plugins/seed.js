@@ -2,5 +2,6 @@ export default async function ({ store }) {
     await store.dispatch('trending/fetchTrending');
     await store.dispatch('genres/fetchGenres');
     await store.dispatch('countries/fetchCountries');
-    await store.dispatch('discover/fetchDiscover');
+    await store.dispatch('discover/fetchDiscoverTV');
+    await store.dispatch('discover/fetchDiscoverMovie');
 }
