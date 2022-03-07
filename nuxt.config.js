@@ -25,7 +25,7 @@ export default {
     { src: '~/plugins/seed' },
     { src: '~/plugins/utils' },
     { src: '~/plugins/filters' },
-    { src: '~/plugins/mixins', mode: 'client' },
+    { src: '~/plugins/mixins' },
     { src: '~/plugins/components', mode: 'client' },
   ],
 
