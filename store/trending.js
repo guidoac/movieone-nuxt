@@ -22,6 +22,15 @@ export const getters = {
 
     random_trending (state) {
         return state.random_trending;
+    },
+
+    random_trending_limit: (state, getters) => limit => {
+        if (limit) {
+            return _.sampleSize(getters.current_trending_all, limit)
+        } else {
+            return _.sample(getters.current_trending_all);
+        }
+        
     }
 }
 

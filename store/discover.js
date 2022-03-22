@@ -21,7 +21,7 @@ export const getters = {
         return state.discover_movie.concat(state.discover_tv);
     },
 
-    current_discover_limit: (state, getters) => (limit) => {
+    current_discover_limit: (state, getters) => limit => {
         return _.sampleSize(getters.current_discover_all, limit)
     },
 
