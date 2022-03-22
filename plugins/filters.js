@@ -6,3 +6,9 @@ Vue.filter('capitalize', (value) => {
 
     return result;
 })
+
+Vue.filter('price', (value) => {
+    const result = `U$ ${value}`;
+
+    return result;
+})

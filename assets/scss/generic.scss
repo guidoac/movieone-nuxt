@@ -24,7 +24,11 @@ $spacers: map-merge(
         7: ($spacer * 5),      //80px
         8: ($spacer * 6.25),   //100px
         9: ($spacer * 7.5),    //120px
-        10: ($spacer * 9.375)  //150px
+        10: ($spacer * 9.375), //150px
+        11: ($spacer * 10.75), //180px
+        12: ($spacer * 12.75),  //210px
+        13: ($spacer * 14.5),  //240px
+        14: ($spacer * 16.75)  //270px
     ),
     $spacers
 );
@@ -70,4 +74,30 @@ $spacers: map-merge(
 
 .bottom-0 {
     bottom: 0;
+}
+
+// z index
+.z-2 {
+    z-index: 2;
+}
+
+.z-5 {
+    z-index: 5;
+}
+
+.z-10 {
+    z-index: 10;
+}
+
+.z-20 {
+    z-index: 20;
+}
+
+.z-30 {
+    z-index: 30;
+}
+
+// transition 
+.transition-all {
+    transition: all .3s ease;
 }

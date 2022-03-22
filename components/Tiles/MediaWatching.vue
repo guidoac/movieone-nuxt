@@ -1,6 +1,9 @@
 <template>
-    <div class="px-3">
-        <div class="bg-dark rounded-3xl d-flex flex-row shadow">
+    <div class="px-3 pt-2">
+        <div
+            role="button"
+            class="bg-dark rounded-3xl d-flex flex-row shadow tile"
+        >
             <no-ssr>
                 <img
                     class="rounded-l-3xl"
@@ -95,10 +98,23 @@ import { mapGetters } from 'vuex';
 <style lang="scss" scoped>
 img {
     width: 35%;
+    transition: all .3s ease;
 }
 
 .genre-box {
     white-space: nowrap;
     width: min-content;
+}
+
+.tile {
+    transition: all .3s ease;
+
+    &:hover {
+        background: #202020 !important;
+
+        & img {
+            transform: scale(1.1)
+        }
+    }
 }
 </style>

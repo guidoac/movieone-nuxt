@@ -41,7 +41,7 @@ export const actions = {
             sort_by: 'popularity.desc',
             include_adult: false,
             include_video: false,
-            page: 1,
+            page: _.random(1, 10),
             with_watch_monetization_types: 'flatrate'
         };
 
@@ -60,7 +60,7 @@ export const actions = {
             sort_by: 'popularity.desc',
             include_adult: false,
             include_video: false,
-            page: 1,
+            page: _.random(1, 10),
             with_watch_monetization_types: 'flatrate'
         };
 
