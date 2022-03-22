@@ -57,9 +57,9 @@
                 </div>
             </div>
             
-            <div class="w-100 bg-dark">
+            <div class="w-100 bg-black">
                 <div class="w-75 mx-auto">
-                    <SelectedMovies class="mt-5 pt-4 z-20" />
+                    <SelectedMovies />
                 </div>
             </div>
         </div>
@@ -95,7 +95,7 @@ export default {
 <style lang="scss" scoped>
 .absolute-container {
     z-index: 20;
-    top: 15%;
+    top: 5%;
 }
 
 .meta-info {
