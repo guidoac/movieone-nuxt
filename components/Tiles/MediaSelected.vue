@@ -1,6 +1,6 @@
 <template>
     <div
-        class="pt-2"
+        class="pt-2 cursor-pointer"
         @mouseover="itemHovered = true"
         @mouseleave="itemHovered = false"
     >
@@ -12,24 +12,29 @@
                         :src="`${$backdrop_url}${media.poster_path}`"
                     />
                 </no-ssr>
-                <div class="z-5 mt-4 w-100">
-                    <div class="d-flex flex-row w-100 justify-content-between">
-                        <h7 class="text-black font-weight-bold">
+
+                <div class="mt-4 w-100">
+                    <div class="d-flex flex-row w-100 justify-content-between mb-2">
+                        <h7 class="text-black font-weight-bold mr-2">
                             {{ media.title || media.original_name }}
                         </h7>
-                        <h5 class="text-black font-weight-bold">
+
+                        <h6 class="text-black text-right font-weight-bold w-50">
                             {{ randomPrice | price }}
-                        </h5>
+                        </h6>
                     </div>
+
                     <h6 class="text-primary font-weight-bold">
                         {{ extractGenres(media) }}
                     </h6>
-                    <div class="d-flex flex-row text-tertiary">
+
+                    <div class="d-flex flex-row text-dark">
                         {{ extractReleaseYear(media) }}
                     </div>
                 </div>
             </div>
         </template>
+
         <template v-else>
             <div class="px-4">
                 <no-ssr>
