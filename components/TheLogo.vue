@@ -2,7 +2,7 @@
     <div>
         <img
             :src="logoPath"
-            width="200"
+            class="logo"
         />
     </div>
 </template>
@@ -20,5 +20,7 @@
 </script>
 
 <style lang="scss" scoped>
-
+.logo {
+    width: 200px;
+}
 </style>

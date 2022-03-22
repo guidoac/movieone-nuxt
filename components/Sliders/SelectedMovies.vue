@@ -1,5 +1,5 @@
 <template>
-    <div class="d-flex flex-column">
+    <div class="d-flex flex-column pb-5">
         <h5 class="text-white mb-2">
             Selected Movies
         </h5>

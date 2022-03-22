@@ -58,9 +58,10 @@
             </div>
             
             <div class="w-100 bg-black">
-                <div class="w-75 mx-auto">
-                    <SelectedMovies />
-                </div>
+                <SelectedMovies class="w-75 mx-auto" />
+            </div>
+            <div class="w-100 bg-dark">
+                <PopularMovies class="w-75 mx-auto" />
             </div>
         </div>
     </div>
@@ -73,6 +74,7 @@ import MainBanner from '~/components/Home/MainBanner';
 import BaseButton from '~/components/Base/BaseButton';
 import RecentWatched from '~/components/Sliders/RecentWatched';
 import SelectedMovies from '~/components/Sliders/SelectedMovies';
+import PopularMovies from '~/components/Home/PopularMovies';
 
 export default {
     name: 'IndexPage',
@@ -82,6 +84,7 @@ export default {
         BaseButton,
         RecentWatched,
         SelectedMovies,
+        PopularMovies,
     },
 
     computed: {
