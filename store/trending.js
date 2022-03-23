@@ -30,7 +30,6 @@ export const getters = {
         } else {
             return _.sample(getters.current_trending_all);
         }
-        
     }
 }
 

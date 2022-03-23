@@ -20,7 +20,7 @@
             class="watching-list mt-2 position-relative"
         >
             <MediaSelected
-                v-for="(media, index) in current_discover_limit(10)"
+                v-for="(media, index) in selectedMovies"
                 :key="index"
                 :media="media"
             />
@@ -49,6 +49,8 @@ import MediaSelected from '~/components/Tiles/MediaSelected';
 
         data () {
             return {
+                selectedMovies: [],
+
                 carouselConfig: {
                     speed: 500,
                     slidesToShow: 5,
@@ -60,8 +62,12 @@ import MediaSelected from '~/components/Tiles/MediaSelected';
 
         computed: {
             ...mapGetters({
-                current_discover_limit: 'discover/current_discover_limit'
+                random_discover_all: 'discover/random_discover_all'
             })
+        },
+
+        mounted () {
+            this.selectedMovies = this.random_discover_all(10);
         }
     }
 </script>

@@ -8,7 +8,7 @@
             class="watching-list mt-2 position-relative"
         >
             <MediaWatching
-                v-for="(media, index) in current_discover_limit(10)"
+                v-for="(media, index) in recentWatchedMovies"
                 :key="index"
                 :media="media"
             />
@@ -36,6 +36,8 @@ export default {
 
     data () {
         return {
+            recentWatchedMovies: [],
+            
             carouselConfig: {
                 speed: 500,
                 slidesToShow: 4,
@@ -49,8 +51,12 @@ export default {
 
     computed: {
         ...mapGetters({
-            current_discover_limit: 'discover/current_discover_limit'
+            random_discover_all: 'discover/random_discover_all'
         })
+    },
+
+    mounted () {
+        this.recentWatchedMovies = this.random_discover_all(10);
     }
 }
 </script>

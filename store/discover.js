@@ -17,20 +17,40 @@ export const mutations = {
 }
 
 export const getters = {
-    current_discover_all (state) {
+    discover_all (state) {
         return state.discover_movie.concat(state.discover_tv);
     },
 
-    current_discover_limit: (state, getters) => limit => {
-        return _.sampleSize(getters.current_discover_all, limit)
+    random_discover_all: (state, getters) => limit => {
+        if (limit) {
+            return _.sampleSize(getters.discover_all, limit)
+        } else {
+            return _.sample(getters.discover_all);
+        } 
     },
 
-    current_discover_tv: (state, getters) => {
+    discover_tv: (state, getters) => {
         return state.discover_tv;
     },
 
-    current_discover_movie: (state, getters) => {
+    random_discover_tv: (state, getters) => (limit) => {
+        if (limit) {
+            return _.sampleSize(getters.discover_tv, limit)
+        } else {
+            return _.sample(getters.discover_tv);
+        }     
+    },
+
+    discover_movie: (state, getters) => {
         return state.discover_movie;
+    },
+
+    random_discover_movie: (state, getters) => (limit) => {
+        if (limit) {
+            return _.sampleSize(getters.discover_movie, limit)
+        } else {
+            return _.sample(getters.discover_movie);
+        }     
     },
 }
 
