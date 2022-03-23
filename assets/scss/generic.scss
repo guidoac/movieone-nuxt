@@ -102,6 +102,10 @@ $spacers: map-merge(
     transition: all .3s ease;
 }
 
+.transition-opacity {
+    transition: opacity .3s ease;
+}
+
 // general
 .cursor-pointer {
     cursor: pointer;
