@@ -2,10 +2,6 @@
 @import "~/node_modules/bootstrap/scss/mixins";
 @import "~/node_modules/bootstrap/scss/variables";
 
-.gradient-x-secondary {
-    @include gradient-x($gray-900, $secondary);
-}
-
 $primary: #FD7014;
 $primary-dark: #301f14;
 $secondary: #202020;
