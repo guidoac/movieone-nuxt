@@ -1,10 +1,13 @@
 import { mapGetters } from 'vuex';
 
+import _ from 'lodash';
+
 export default {
     computed: {
         ...mapGetters({
             genre_by_id: 'genres/genre_by_id',
             country_by_id: 'countries/country_by_id',
+            current_tv_details: 'tv/current_tv_details'
         })
     },
 
@@ -16,7 +19,7 @@ export default {
          * @param {*} media 
          * @returns {string}
          */
-        extractGenres (media) {
+        getGenre (media) {
             if (media && media.genre_ids?.length > 0) {
                 let result = {}
 
@@ -38,7 +41,7 @@ export default {
          * @param {*} media 
          * @returns {string}
          */
-        extractReleaseYear (media) {
+        getReleaseYear (media) {
             const date = new Date(media.first_air_date || media.release_date)
 
             return date.getFullYear();
@@ -50,11 +53,27 @@ export default {
          * @param {} media 
          * @returns {object}
          */
-        extractCountry (media) {
+        getCountry (media) {
             if (media && media.origin_country) {
                 return this.country_by_id(media.origin_country[0])
             } else {
                 return '';
+            }
+        },
+
+        async getDetails (initial) {
+            if (_.isArray(initial)) {
+                initial.map(async (media, index) => {
+                    await this.$store.dispatch('tv/fetchDetails', { id: media.id });
+                    
+                    return this.current_tv_details;
+                });
+
+                return initial;
+            } else {
+                await this.$store.dispatch('tv/fetchDetails', { id: initial.id });
+                    
+                return this.current_tv_details;
             }
         }
     }

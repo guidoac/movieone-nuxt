@@ -1,34 +1,39 @@
 <template>
-    <div class="d-flex flex-column pb-5">
-        <h5 class="text-white mb-2">
-            Selected Movies
-        </h5>
-
-        <div class="d-flex flex-row justify-content-between">
-            <h6 class="text-tertiary mt-2">
-                Movies that you added to the watch later library
-            </h6>
-
-            <NuxtLink to="">
-                view more
-                <font-awesome-icon :icon="['fas', 'circle-arrow-right']" />
-            </NuxtLink>
-        </div>
-
-        <VueSlickCarousel
-            v-bind="carouselConfig"
-            class="watching-list mt-2 position-relative"
+    <div>
+        <div
+            v-if="selectedMovies.length"
+            class="d-flex flex-column pb-5"
         >
-            <MediaSelected
-                v-for="(media, index) in selectedMovies"
-                :key="index"
-                :media="media"
-            />
+            <h5 class="text-white mb-2">
+                Selected Movies
+            </h5>
 
-            <template #customPaging>
-                <div class="bg-tertiary p-1 rounded-circle mx-2 opacity-50" />
-            </template>
-        </VueSlickCarousel>
+            <div class="d-flex flex-row justify-content-between">
+                <h6 class="text-tertiary mt-2">
+                    Movies that you added to the watch later library
+                </h6>
+
+                <NuxtLink to="">
+                    view more
+                    <font-awesome-icon :icon="['fas', 'circle-arrow-right']" />
+                </NuxtLink>
+            </div>
+
+            <VueSlickCarousel
+                v-bind="carouselConfig"
+                class="watching-list mt-2 position-relative"
+            >
+                <MediaSelected
+                    v-for="(media, index) in selectedMovies"
+                    :key="index"
+                    :media="media"
+                />
+
+                <template #customPaging>
+                    <div class="bg-tertiary p-1 rounded-circle mx-2 opacity-50" />
+                </template>
+            </VueSlickCarousel>
+        </div>
     </div>
 </template>
 

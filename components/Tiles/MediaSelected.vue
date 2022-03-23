@@ -25,11 +25,11 @@
                     </div>
 
                     <h6 class="text-primary font-weight-bold">
-                        {{ extractGenres(media) }}
+                        {{ getGenre(media) }}
                     </h6>
 
                     <div class="d-flex flex-row text-dark">
-                        {{ extractReleaseYear(media) }}
+                        {{ getReleaseYear(media) }}
                     </div>
                 </div>
             </div>

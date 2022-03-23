@@ -26,16 +26,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.cover-to-left {
-    top: 0;
-    left: 0;
-    background: linear-gradient(90deg, rgba(22,22,22,1) 0%, rgba(22,22,22,0.9023984593837535) 15%, rgba(0,0,0,0) 75%);
-}
-
-.cover-to-down {
-    top: 0;
-    left: 0;
-    background: linear-gradient(0deg, rgba(22,22,22,1) 0%, rgba(22,22,22,0.9023984593837535) 15%, rgba(0,0,0,0) 75%);
-}
 
 </style>

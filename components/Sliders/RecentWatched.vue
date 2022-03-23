@@ -1,22 +1,27 @@
 <template>
-    <div class="d-flex flex-column">
-        <h6 class="text-white mb-2">
-            Recent Watched
-        </h6>
-        <VueSlickCarousel
-            v-bind="carouselConfig"
-            class="watching-list mt-2 position-relative"
+    <div>
+        <div
+            v-if="recentWatchedMovies.length"
+            class="d-flex flex-column"
         >
-            <MediaWatching
-                v-for="(media, index) in recentWatchedMovies"
-                :key="index"
-                :media="media"
-            />
+            <h6 class="text-white mb-2">
+                Recent Watched
+            </h6>
+            <VueSlickCarousel
+                v-bind="carouselConfig"
+                class="watching-list mt-2 position-relative"
+            >
+                <MediaWatching
+                    v-for="(media, index) in recentWatchedMovies"
+                    :key="index"
+                    :media="media"
+                />
 
-            <template #customPaging>
-                <div class="bg-tertiary p-1 rounded-circle mx-2 opacity-50" />
-            </template>
-        </VueSlickCarousel>
+                <template #customPaging>
+                    <div class="bg-tertiary p-1 rounded-circle mx-2 opacity-50" />
+                </template>
+            </VueSlickCarousel>
+        </div>
     </div>
 </template>
 
