@@ -28,7 +28,7 @@
 import { mapGetters } from 'vuex';
 
 import MainBanner from '~/components/Home/MainBanner';
-import RecentWatched from '~/components/Sliders/RecentWatched';
+import RecentWatched from '~/components/Home/RecentWatched';
 import SelectedMovies from '~/components/Sliders/SelectedMovies';
 import PopularMovies from '~/components/Home/PopularMovies';
 import OverlayMediaInfo from '~/components/OverlayMediaInfo';
