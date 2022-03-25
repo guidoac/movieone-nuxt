@@ -85,7 +85,8 @@
                     </span>
                 </div>
 
-                <h4 class="text-primary font-weight-bold">
+                <h4 class="text-warning font-weight-bold">
+                    <font-awesome-icon :icon="['fas', 'star']" />
                     {{ media.vote_average }}
                 </h4>
             </div>
@@ -96,7 +97,7 @@
 
     <template v-else-if="type === 'extra-minified'">
         <div class="d-flex flex-column justify-content-around">
-            <div class="text-tertiary">
+            <div class="text-tertiary mb-3">
                 <h4 class="font-family-secondary text-shadow-lg">
                     {{ media.original_name || media.title }}
                 </h4>
@@ -121,7 +122,8 @@
                     </span>
                 </div>
 
-                <span class="h6 text-primary font-weight-bold">
+                <span class="h6 text-warning font-weight-bold">
+                    <font-awesome-icon :icon="['fas', 'star']" />
                     {{ media.vote_average }}
                 </span>
             </div>

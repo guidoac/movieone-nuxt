@@ -52,7 +52,7 @@
         &.hovered {
             filter: brightness(0.75);
             transform: scale(1.35);
-            box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+            text-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
         }
     }
 }

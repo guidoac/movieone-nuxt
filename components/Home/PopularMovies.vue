@@ -95,7 +95,7 @@
                             <Transition name="fade">
                                 <div
                                     v-show="itemHovered === 3"
-                                    class="rounded-3xl shadow-lg position-absolute cover-to-up top-0 z-10 h-100 w-100 p-5"
+                                    class="rounded-3xl shadow-lg position-absolute cover-to-up top-0 z-10 h-100 w-100 p-4"
                                 >
                                     <OverlayMediaInfo
                                         :media="current_popular[3]"
