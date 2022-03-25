@@ -43,11 +43,11 @@
                                     <Transition name="fade">
                                         <div
                                             v-show="itemHovered === 1"
-                                            class="rounded-3xl shadow-lg position-absolute cover-to-left top-0 z-10 h-100 w-100 p-5"
+                                            class="rounded-3xl shadow-lg position-absolute cover-to-left top-0 z-10 h-100 w-100 p-4"
                                         >
                                             <OverlayMediaInfo
                                                 :media="current_popular[1]"
-                                                type="minified"
+                                                type="extra-minified"
                                             />
                                         </div>
                                     </Transition>
@@ -68,11 +68,11 @@
                                     <Transition name="fade">
                                         <div
                                             v-show="itemHovered === 2"
-                                            class="rounded-3xl shadow-lg position-absolute cover-to-left top-0 z-10 h-100 w-100 p-5"
+                                            class="rounded-3xl shadow-lg position-absolute cover-to-left top-0 z-10 h-100 w-100 p-4"
                                         >
                                             <OverlayMediaInfo
                                                 :media="current_popular[2]"
-                                                type="minified"
+                                                type="extra-minified"
                                             />
                                         </div>
                                     </Transition>
@@ -99,7 +99,7 @@
                                 >
                                     <OverlayMediaInfo
                                         :media="current_popular[3]"
-                                        type="minified"
+                                        type="extra-minified"
                                     />
                                 </div>
                             </Transition>

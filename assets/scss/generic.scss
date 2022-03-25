@@ -110,3 +110,12 @@ $spacers: map-merge(
 .cursor-pointer {
     cursor: pointer;
 }
+
+// text shadow
+.text-shadow {
+    text-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+
+.text-shadow-lg {
+    text-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+}

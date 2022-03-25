@@ -13,7 +13,7 @@
                 </div>
             </div>
             
-            <div class="w-100 bg-black">
+            <div class="w-100 bg-black selected-movies">
                 <SelectedMovies class="w-75 mx-auto" />
             </div>
 
@@ -61,5 +61,9 @@ export default {
 .meta-info {
     width: 40%;
     margin-bottom: 7rem;
+}
+
+.selected-movies {
+    height: 530px;
 }
 </style>

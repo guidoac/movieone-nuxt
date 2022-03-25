@@ -61,11 +61,11 @@
     <template v-else-if="type === 'minified'">
         <div class="d-flex flex-column justify-content-around">
             <div class="text-tertiary">
-                <h2 class="font-family-secondary">
+                <h2 class="font-family-secondary text-shadow-lg">
                     {{ media.original_name || media.title }}
                 </h2>
                 
-                <div class="clearfix h6">
+                <div class="h6">
                     <span class="mr-2 font-weight-bold">
                         {{ media.number_of_seasons }}
                         {{
@@ -91,6 +91,42 @@
             </div>
 
             <PlayButton class="mt-4" />
+        </div>
+    </template>
+
+    <template v-else-if="type === 'extra-minified'">
+        <div class="d-flex flex-column justify-content-around">
+            <div class="text-tertiary">
+                <h4 class="font-family-secondary text-shadow-lg">
+                    {{ media.original_name || media.title }}
+                </h4>
+                
+                <div class="h6">
+                    <span class="mr-2 font-weight-bold">
+                        {{ media.number_of_seasons }}
+                        {{
+                            media.number_of_seasons > 1
+                                ? 'Seasons'
+                                : 'Season' 
+                        }}
+                    </span>
+
+                    <span>
+                        {{ media.number_of_episodes }}
+                        {{ 
+                            media.number_of_episodes > 1 
+                                ? 'Episodes'
+                                : 'Episode'
+                        }}
+                    </span>
+                </div>
+
+                <span class="h6 text-primary font-weight-bold">
+                    {{ media.vote_average }}
+                </span>
+            </div>
+
+            <PlayButton size="xs" />
         </div>
     </template>
 </div>

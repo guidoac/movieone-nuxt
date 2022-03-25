@@ -1,5 +1,6 @@
 <template>
     <div 
+        :class="[`size-${size}`]"
         class="text-primary cursor-pointer text-left play-button"
         @mouseenter="hovered = true"
         @mouseleave="hovered = false"
@@ -18,6 +19,13 @@
     export default {
         name: 'PlayButton',
 
+        props: {
+            size: {
+                type: String,
+                default: 'md'
+            }
+        },
+
         data () {
             return {
                 hovered: false
@@ -28,7 +36,17 @@
 
 <style lang="scss" scoped>
 .play-button {
-    font-size: 6rem;
+    &.size-xs {
+        font-size: 2rem;
+    }
+
+    &.size-sm {
+        font-size: 4rem;
+    }
+
+    &.size-md {
+        font-size: 6rem;
+    }
 
     .play-icon {
         &.hovered {
