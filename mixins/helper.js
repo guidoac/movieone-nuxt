@@ -63,10 +63,12 @@ export default {
 
         async getDetails (initial) {
             if (_.isArray(initial)) {
-                const result = _.forEach(initial, async media => {
+                const result = [];
+                
+                _.forEach(initial, async media => {
                     const res = await this.$store.dispatch('tv/fetchDetails', { id: media.id });
                     
-                    return res;
+                    result.push(res);
                 });
 
                 return result;
