@@ -1,0 +1,41 @@
+<template>
+    <div 
+        class="text-primary cursor-pointer text-left play-button"
+        @mouseenter="hovered = true"
+        @mouseleave="hovered = false"
+    >
+        <font-awesome-icon
+            :icon="['fas', 'circle-play']"
+            :class="{
+                hovered
+            }"
+            class="play-icon transition-all"
+        />
+    </div>
+</template>
+
+<script>
+    export default {
+        name: 'PlayButton',
+
+        data () {
+            return {
+                hovered: false
+            }
+        }
+    }
+</script>
+
+<style lang="scss" scoped>
+.play-button {
+    font-size: 6rem;
+
+    .play-icon {
+        &.hovered {
+            filter: brightness(0.75);
+            transform: scale(1.35);
+            box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+        }
+    }
+}
+</style>

@@ -59,13 +59,38 @@
     </template>
 
     <template v-else-if="type === 'minified'">
-        <div>
-            <h2 class="font-family-secondary text-tertiary">
-                {{ media.original_name || media.title }}
-            </h2>
-            <h4>
-                {{ `` }}
-            </h4>
+        <div class="d-flex flex-column justify-content-around">
+            <div class="text-tertiary">
+                <h2 class="font-family-secondary">
+                    {{ media.original_name || media.title }}
+                </h2>
+                
+                <div class="clearfix h6">
+                    <span class="mr-2 font-weight-bold">
+                        {{ media.number_of_seasons }}
+                        {{
+                            media.number_of_seasons > 1
+                                ? 'Seasons'
+                                : 'Season' 
+                        }}
+                    </span>
+
+                    <span>
+                        {{ media.number_of_episodes }}
+                        {{ 
+                            media.number_of_episodes > 1 
+                                ? 'Episodes'
+                                : 'Episode'
+                        }}
+                    </span>
+                </div>
+
+                <h4 class="text-primary font-weight-bold">
+                    {{ media.vote_average }}
+                </h4>
+            </div>
+
+            <PlayButton class="mt-4" />
         </div>
     </template>
 </div>
@@ -73,12 +98,14 @@
 
 <script>
 import BaseButton from '~/components/Base/BaseButton';
+import PlayButton from '~/components/PlayButton';
 
 export default {
-    name: 'MediaInfo',
+    name: 'OverlayMediaInfo',
 
     components: {
-        BaseButton
+        BaseButton,
+        PlayButton
     },
 
     props: {

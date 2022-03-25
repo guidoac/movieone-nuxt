@@ -6,7 +6,7 @@
             <div class="absolute-container position-absolute w-100">
                 <div class="w-75 mx-auto">
                     <div class="meta-info">
-                        <MediaInfo :media="random_trending" />
+                        <OverlayMediaInfo :media="random_trending" />
                     </div>
 
                     <RecentWatched />
@@ -31,7 +31,7 @@ import MainBanner from '~/components/Home/MainBanner';
 import RecentWatched from '~/components/Sliders/RecentWatched';
 import SelectedMovies from '~/components/Sliders/SelectedMovies';
 import PopularMovies from '~/components/Home/PopularMovies';
-import MediaInfo from '~/components/MediaInfo';
+import OverlayMediaInfo from '~/components/OverlayMediaInfo';
 
 export default {
     name: 'IndexPage',
@@ -41,7 +41,7 @@ export default {
         RecentWatched,
         SelectedMovies,
         PopularMovies,
-        MediaInfo,
+        OverlayMediaInfo,
     },
 
     computed: {

@@ -8,7 +8,7 @@
                         <div
                             class="mb-3 position-relative cursor-pointer"
                             @mouseenter="itemHovered = 0"
-                            @mouseleave="itemHovered = null"
+                            @mouseleave="itemHovered = 0"
                         >
                             <img
                                 class="rounded-3xl shadow"
@@ -20,7 +20,7 @@
                                     v-show="itemHovered === 0"
                                     class="rounded-3xl shadow-lg position-absolute cover-to-left top-0 z-10 h-100 w-100 p-5"
                                 >
-                                    <MediaInfo
+                                    <OverlayMediaInfo
                                         :media="current_popular[0]"
                                         type="minified"
                                     />
@@ -45,7 +45,7 @@
                                             v-show="itemHovered === 1"
                                             class="rounded-3xl shadow-lg position-absolute cover-to-left top-0 z-10 h-100 w-100 p-5"
                                         >
-                                            <MediaInfo
+                                            <OverlayMediaInfo
                                                 :media="current_popular[1]"
                                                 type="minified"
                                             />
@@ -70,7 +70,7 @@
                                             v-show="itemHovered === 2"
                                             class="rounded-3xl shadow-lg position-absolute cover-to-left top-0 z-10 h-100 w-100 p-5"
                                         >
-                                            <MediaInfo
+                                            <OverlayMediaInfo
                                                 :media="current_popular[2]"
                                                 type="minified"
                                             />
@@ -97,7 +97,7 @@
                                     v-show="itemHovered === 3"
                                     class="rounded-3xl shadow-lg position-absolute cover-to-up top-0 z-10 h-100 w-100 p-5"
                                 >
-                                    <MediaInfo
+                                    <OverlayMediaInfo
                                         :media="current_popular[3]"
                                         type="minified"
                                     />
@@ -114,13 +114,13 @@
 <script>
 import { mapGetters } from 'vuex'
 
-import MediaInfo from '~/components/MediaInfo'
+import OverlayMediaInfo from '~/components/OverlayMediaInfo'
 
 export default {
     name: 'PopularMovies',
 
     components: {
-        MediaInfo,
+        OverlayMediaInfo,
     },
 
     data() {
