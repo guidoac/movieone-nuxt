@@ -63,13 +63,13 @@ export default {
 
         async getDetails (initial) {
             if (_.isArray(initial)) {
-                initial.map(async (media, index) => {
-                    await this.$store.dispatch('tv/fetchDetails', { id: media.id });
+                const result = _.forEach(initial, async media => {
+                    const res = await this.$store.dispatch('tv/fetchDetails', { id: media.id });
                     
-                    return this.current_tv_details;
+                    return res;
                 });
 
-                return initial;
+                return result;
             } else {
                 await this.$store.dispatch('tv/fetchDetails', { id: initial.id });
                     
