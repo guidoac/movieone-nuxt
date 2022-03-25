@@ -1,21 +1,26 @@
 export const state = () => ({
-    genres: []
+    genres_movie: [],
+    genres_tv: [],
 })
 
 export const mutations = {
-    'SET_GENRES' (state, data) {
-        state.genres = data;
+    'SET_GENRES_MOVIE' (state, data) {
+        state.genres_movie = data;
+    },
+
+    'SET_GENRES_TV' (state, data) {
+        state.genres_tv = data;
     }
 }
 
 export const getters = {
     genres_all: (state) => {
-        return state.genres;
+        return state.genres_movie.concat(state.genres_tv);
     },
 
-    genre_by_id: (state) => (id) => {
-        if (state.genres && id) {
-            const chosen = state.genres.find(genre => genre.id === id);
+    genre_by_id: (state, getters) => (id) => {
+        if (getters.genres_all && id) {
+            const chosen = getters.genres_all.find(genre => genre.id === id);
     
             return chosen;
         } else {
@@ -26,8 +31,10 @@ export const getters = {
 
 export const actions = {
     async fetchGenres ({ commit }) {
-        const res = await this.$axios.$get('/genre/movie/list');
+        const genresMovie = await this.$axios.$get('/genre/movie/list');
+        const genresTV = await this.$axios.$get('/genre/tv/list');
 
-        commit('SET_GENRES', res.genres);
+        commit('SET_GENRES_MOVIE', genresMovie.genres);
+        commit('SET_GENRES_TV', genresTV.genres);
     }
 }
