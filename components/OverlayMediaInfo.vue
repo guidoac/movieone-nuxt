@@ -97,12 +97,12 @@
 
     <template v-else-if="type === 'extra-minified'">
         <div class="d-flex flex-column justify-content-around">
-            <div class="text-tertiary mb-3">
-                <h4 class="font-family-secondary text-shadow-lg">
+            <div class="text-tertiary mb-1">
+                <h5 class="font-family-secondary text-shadow-lg">
                     {{ media.original_name || media.title }}
-                </h4>
+                </h5>
                 
-                <div class="h6">
+                <div class="h7">
                     <span class="mr-2 font-weight-bold">
                         {{ media.number_of_seasons }}
                         {{
@@ -122,7 +122,7 @@
                     </span>
                 </div>
 
-                <span class="h6 text-warning font-weight-bold">
+                <span class="h7 text-warning font-weight-bold">
                     <font-awesome-icon :icon="['fas', 'star']" />
                     {{ media.vote_average }}
                 </span>

@@ -1,7 +1,7 @@
 <template>
     <div 
         :class="[`size-${size}`]"
-        class="text-primary cursor-pointer text-left play-button"
+        class="text-primary cursor-pointer text-left play-button w-fit"
         @mouseenter="hovered = true"
         @mouseleave="hovered = false"
     >
@@ -10,7 +10,7 @@
             :class="{
                 hovered
             }"
-            class="play-icon transition-all"
+            class="bg-white play-icon transition-all rounded-circle"
         />
     </div>
 </template>
