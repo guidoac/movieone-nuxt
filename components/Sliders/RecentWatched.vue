@@ -42,7 +42,7 @@ export default {
     data () {
         return {
             recentWatchedMovies: [],
-            
+            numberOfItens: 10,
             carouselConfig: {
                 speed: 500,
                 slidesToShow: 4,
@@ -61,7 +61,7 @@ export default {
     },
 
     mounted () {
-        this.recentWatchedMovies = this.random_discover_all(10);
+        this.recentWatchedMovies = this.random_discover_all(this.numberOfItens);
     }
 }
 </script>

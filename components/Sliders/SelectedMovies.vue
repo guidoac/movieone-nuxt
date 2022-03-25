@@ -55,7 +55,7 @@ import MediaSelected from '~/components/Tiles/MediaSelected';
         data () {
             return {
                 selectedMovies: [],
-
+                numberOfItens: 10,
                 carouselConfig: {
                     speed: 500,
                     slidesToShow: 5,
@@ -72,7 +72,7 @@ import MediaSelected from '~/components/Tiles/MediaSelected';
         },
 
         mounted () {
-            this.selectedMovies = this.random_discover_all(10);
+            this.selectedMovies = this.random_discover_all(this.numberOfItens);
         }
     }
 </script>

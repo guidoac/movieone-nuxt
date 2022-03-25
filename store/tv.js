@@ -19,5 +19,7 @@ export const actions = {
         const res = await this.$axios.$get(`/tv/${params.id}`);
 
         commit('SET_DETAILS', res);
+
+        return res;
     }
 }

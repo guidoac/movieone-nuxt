@@ -2,7 +2,6 @@ import _ from 'lodash';
 
 export const state = () => ({
     discover_tv: [],
-
     discover_movie: [],
 })
 
