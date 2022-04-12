@@ -20,6 +20,10 @@
             <div class="w-100 bg-dark">
                 <PopularMovies class="w-75 mx-auto" />
             </div>
+
+            <div class="w-100 pt-5 bg-black">
+                <MoviesOnSale class="w-75 mx-auto" />
+            </div>
         </div>
     </div>
 </template>
@@ -31,6 +35,7 @@ import MainBanner from '~/components/Home/MainBanner';
 import RecentWatched from '~/components/Home/RecentWatched';
 import SelectedMovies from '~/components/Home/SelectedMovies';
 import PopularMovies from '~/components/Home/PopularMovies';
+import MoviesOnSale from '~/components/Home/MoviesOnSale';
 import OverlayMediaInfo from '~/components/OverlayMediaInfo';
 
 export default {
@@ -42,6 +47,7 @@ export default {
         SelectedMovies,
         PopularMovies,
         OverlayMediaInfo,
+        MoviesOnSale,
     },
 
     computed: {
@@ -60,7 +66,7 @@ export default {
 
 .meta-info {
     width: 40%;
-    margin-bottom: 7rem;
+    margin-bottom: 5rem;
 }
 
 .selected-movies {
