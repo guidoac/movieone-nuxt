@@ -1,4 +1,33 @@
-# movie-one
+<div align="center">
+  <img width=50% src="https://github.com/guidoac/movieone-nuxt/blob/master/assets/img/movieone.png">
+</div>
+
+----
+
+<p align="center">
+  This project has the purpose to improve my portfolio and to learn techniques using <a href="https://nuxtjs.org/">NuxtJS</a>. THIS IS NOT A REAL PROJECT.
+  <br>
+  Movieone is an stream platform that you can watch and see different lists of movies and TV series. You can discover and view data from many different movies and series.
+  <br>
+  My idea was to search in many different graphic design hubs for a real nice and beautiful project, with a modern UI/UX to replicate and turn it into something usable and animated.
+</p>
+
+<br>
+
+## Overview
+<p>
+  As i said before, i was searching in many different graphic design hubs, a project to turn into something usable. This project should be very beautiful, with a modern design and (off course) should be something possible to make.
+</p>
+
+<p>
+  So i found <a href="https://www.behance.net/gallery/125199355/Movie-stream-platform-UI"> this project </a> on Behance. The initial idea of this project consists in become a online platform that allows you to watch your favorite movies (like Netflix, Amazon Prime, etc...).
+</p>
+
+<p>
+  I don't have a plan to turn this into a real project and (for example) turn possible to watch media, or create account, make login, and things that can use a backend framework or something similar.
+  <br>
+  My purpose with this project is just to build the front-end using the newest techniques, conventions and libraries that i can.
+</p>
 
 ## Build Setup
 
@@ -12,58 +41,70 @@ $ yarn dev
 # build for production and launch server
 $ yarn build
 $ yarn start
-
-# generate static project
-$ yarn generate
 ```
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 
-## Special Directories
+## Technical stuff
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+Libraries, techniques, conventions, and all technical stuff that i used and were needed to build this project.
 
-### `assets`
+### `Database`
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+I used The Movie DB API to build this project, it was necessary to handle with a big amount of data and to have in my hands a big catalog of movies and TV series.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+Click <a href="https://developers.themoviedb.org/3">here</a> for The Movie DB docs.
 
-### `components`
+### `Nuxt`
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+Library that i used for the front end and basically i built this project to learn Nuxt and its features. This library helped me a lot to build this project, its automated router according to your folder structure, conventions, auto import components, SSR/SSG alternatives and many other features.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
+Click <a href="https://nuxtjs.org/">here</a> for the Nuxt docs.
 
-### `layouts`
+### `Vue.js`
 
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
+Behind Nuxt, there is a lib that i love so much, i'm a Vue.js admirer. Mainly this project was built with Vue.js and its features, i already know many this about Vue, but we never stop learning new things. This project was built with Vue 2.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
+Click <a href="https://vuejs.org/">here</a> for the Vue.js docs.
 
-### `pages`
+### `Vuex`
 
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
+I used Vuex to manage data inside the application.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
+Click <a href="">here</a> for the Vuex docs.
 
-### `plugins`
+### `Vue Router`
 
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
+I used the default Vue Router contained in Nuxt.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
+Click <a href="https://router.vuejs.org/">here</a> for the Vue Router docs.
 
-### `static`
+### `BootstrapVue`
 
-This directory contains your static files. Each file inside this directory is mapped to `/`.
+I used a component library called BootstrapVue, that allows me to work with Bootstrap using Vue components.
 
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
+Click <a href="https://bootstrap-vue.org/">here</a> for the BootstrapVue docs.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
+### `Vue Slick Carousel`
 
-### `store`
+I used Vue Slick carousel to build all the carousels in the website. This library allows me to modify many things (aesthetically), so i thought this lib works very well for this project.
 
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
+Click <a href="https://www.npmjs.com/package/vue-slick-carousel">here</a> for the Vue Slick Carousel docs.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
-# movieone-nuxt
+### `Webpack`
+
+I used Webpack (could not be another) to bundle all my assets.
+
+Click <a href="https://webpack.js.org/">here</a> for the Webpack docs.
+
+### `Vue Style Guide`
+
+I used Vue Style Guide to follow conventions, avoid errors, avoid anti-patterns, and follow many rules that turn my Vue code clean and easier to mantain.
+
+Click <a href="https://v2.vuejs.org/v2/style-guide/?redirect=true">here</a> for the Vue Style Guide docs.
+
+### `Vue Style Guidist`
+
+I used Vue Style Guidist to document all my Vue components, methods, computed methods, mixins, plugins, Vuex Actions, Vuex Getters, Vuex Mutations and many others Vue-based features.
+
+Click <a href="https://vue-styleguidist.github.io/">here</a> for the Vue Style Guidist docs.
