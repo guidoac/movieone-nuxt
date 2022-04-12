@@ -1,12 +1,12 @@
 <template>
     <div>
         <MediaList
-            :data="random_discover_all(numberOfItens)"
+            :data="recentWatchedMovies"
             title="Recent Watched"
         >
             <template #tile>
                 <MediaWatching
-                    v-for="(media, index) in random_discover_all(numberOfItens)"
+                    v-for="(media, index) in recentWatchedMovies"
                     :key="index"
                     :media="media"
                 />
