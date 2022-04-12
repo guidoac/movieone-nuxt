@@ -4,9 +4,20 @@
             v-if="data.length"
             class="d-flex flex-column"
         >
-            <h6 class="text-white mb-2">
+            <h5
+                v-if="title"
+                class="text-white mb-2"
+            >
                 {{ title }}
+            </h5>
+
+            <h6
+                v-if="subtitle"
+                class="text-tertiary mt-2"
+            >
+                {{ subtitle }}
             </h6>
+            
             <VueSlickCarousel
                 v-bind="carouselConfig"
                 class="watching-list mt-2 position-relative"
@@ -39,6 +50,12 @@ export default {
         title: {
             type: String,
             required: true
+        },
+
+        subtitle: {
+            type: String,
+            required: false,
+            default: ''
         }
     },
 
