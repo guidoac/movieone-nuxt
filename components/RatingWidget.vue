@@ -1,5 +1,8 @@
 <template>
-    <div class="rounded-pill rating-wrapper d-flex flex-row align-items-center pr-3">
+    <div
+        :style="style"
+        class="rounded-pill rating-wrapper d-flex flex-row align-items-center pr-3"
+    >
         <div class="rounded-circle star-wrapper text-dark px-2 py-1 mr-1">
             <font-awesome-icon :icon="['fas', 'star']" />
         </div>
@@ -18,6 +21,20 @@
             rating: {
                 type: Number,
                 required: true
+            },
+
+            size: {
+                type: Number,
+                required: false,
+                default: 5
+            }
+        },
+
+        computed: {
+            style () {
+                return {
+                    'width': `${this.size}rem`
+                }
             }
         }
     }
@@ -25,9 +42,9 @@
 
 <style lang="scss" scoped>
 .rating-wrapper {
-    width: 5rem;
     background-color: rgba(61, 61, 6, 0.747);
     color: rgb(204, 204, 0);
+    height: fit-content;
     .star-wrapper {
         background-color: rgb(204, 204, 0);
     }

@@ -85,10 +85,7 @@
                     </span>
                 </div>
 
-                <h4 class="text-warning font-weight-bold">
-                    <font-awesome-icon :icon="['fas', 'star']" />
-                    {{ media.vote_average }}
-                </h4>
+                 <RatingWidget :rating="media.vote_average" />
             </div>
 
             <PlayButton class="mt-4" />
@@ -121,14 +118,16 @@
                         }}
                     </span>
                 </div>
-
-                <span class="h7 text-warning font-weight-bold">
-                    <font-awesome-icon :icon="['fas', 'star']" />
-                    {{ media.vote_average }}
-                </span>
             </div>
 
-            <PlayButton size="xs" />
+            <div class="d-flex flex-row align-items-center justify-content-between w-75">
+                <RatingWidget
+                    :size="4"
+                    :rating="media.vote_average"
+                />
+
+                <PlayButton size="sm" />
+            </div>
         </div>
     </template>
 </div>
@@ -137,13 +136,15 @@
 <script>
 import BaseButton from '~/components/Base/BaseButton';
 import PlayButton from '~/components/PlayButton';
+import RatingWidget from '~/components/RatingWidget';
 
 export default {
     name: 'OverlayMediaInfo',
 
     components: {
         BaseButton,
-        PlayButton
+        PlayButton,
+        RatingWidget,
     },
 
     props: {
