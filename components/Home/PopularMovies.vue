@@ -1,7 +1,13 @@
 <template>
     <div>
-        <div v-if="current_popular.length === numberOfItens" class="d-flex flex-column py-5">
-            <h5 class="text-white font-weight-semibold mb-5">Popular</h5>
+        <div
+            v-if="current_popular.length === numberOfItens"
+            class="d-flex flex-column py-5"
+        >
+            <h5 class="text-white font-weight-semibold mb-5">
+                Popular
+            </h5>
+
             <div class="col-12 row px-0">
                 <no-ssr>
                     <div class="col-8">
@@ -11,8 +17,8 @@
                             @mouseleave="itemHovered = 0"
                         >
                             <img
-                                class="rounded-3xl shadow"
                                 :src="`${$backdrop_url}${current_popular[0].backdrop_path}`"
+                                class="rounded-3xl shadow"
                             />
 
                             <Transition name="fade">
@@ -36,8 +42,8 @@
                             >
                                 <div class="position-relative">
                                     <img
-                                        class="rounded-3xl shadow"
                                         :src="`${$backdrop_url}${current_popular[1].backdrop_path}`"
+                                        class="rounded-3xl shadow"
                                     />
 
                                     <Transition name="fade">
@@ -61,8 +67,8 @@
                             >
                                 <div class="position-relative">
                                     <img
-                                        class="rounded-3xl shadow"
                                         :src="`${$backdrop_url}${current_popular[2].backdrop_path}`"
+                                        class="rounded-3xl shadow"
                                     />
 
                                     <Transition name="fade">
@@ -88,8 +94,8 @@
                     >
                         <div class="position-relative">
                             <img
-                                class="rounded-3xl w-100"
                                 :src="`${$backdrop_url}${current_popular[3].poster_path}`"
+                                class="rounded-3xl w-100"
                             />
 
                             <Transition name="fade">
