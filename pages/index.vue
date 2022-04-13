@@ -70,6 +70,7 @@ export default {
 }
 
 .selected-movies {
-    height: 530px;
+    min-height: 530px;
+    padding-bottom: 2rem;
 }
 </style>
