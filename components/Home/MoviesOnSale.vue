@@ -3,6 +3,7 @@
         <MediaList
             :data="moviesOnSale"
             title="Movies on Sale"
+            :slides-to-show="6"
         >
             <template #tile>
                 <MovieOnSale

@@ -1,6 +1,6 @@
 <template>
-    <div class="cursor-pointer">
-        <div class="p-4 rounded-3xl transition-all">
+    <div class="cursor-pointer p-3 rounded-3xl transition-all tile">
+        <div class="img-wrapper position-relative">
             <no-ssr>
                 <img
                     class="rounded-3xl"
@@ -8,18 +8,17 @@
                 />
             </no-ssr>
 
+        </div>
+
+        <div class="d-flex flex-column justify-content-between meta-info-wrapper">
             <div class="mt-4 w-100">
-                <div class="d-flex flex-row w-100 justify-content-between">
+                <div class="d-flex flex-row justify-content-between">
                     <h6 class="text-white font-weight-bold mr-2 h7">
                         {{ media.title || media.original_name }}
                     </h6>
-
-                    <h6 class="text-white text-right font-weight-bold w-50">
-                        {{ randomPrice | price }}
-                    </h6>
                 </div>
 
-                <div class="d-flex flex-row text-tertiary w-50 justify-content-between h7">
+                <div class="d-flex flex-row text-tertiary justify-content-between h7">
                     <p class="font-weight-bold">
                         {{ getGenre(media) }}
                     </p>
@@ -30,7 +29,21 @@
                 </div>
             </div>
 
-            <RatingWidget :rating="media.vote_average" />
+            <div class="d-flex flex-row justify-content-between align-items-center">
+                <RatingWidget
+                    class="w-50"
+                    :rating="media.vote_average"
+                />
+
+                <div class="w-50 text-right">
+                    <p class="text-tertiary text-decoration-line-through text-right font-weight-bold h8 mb-0">
+                        {{ randomPrice | price }}
+                    </p>
+                    <p class="text-white text-right font-weight-bold h7 mb-0">
+                        {{ randomPrice | price }}
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -91,11 +104,6 @@ img {
     transition: all .3s ease;
 }
 
-.genre-box {
-    white-space: nowrap;
-    width: min-content;
-}
-
 .tile {
     transition: all .3s ease;
 
@@ -106,5 +114,9 @@ img {
             transform: scale(1.1)
         }
     }
+}
+
+.meta-info-wrapper {
+    height: 150px;
 }
 </style>

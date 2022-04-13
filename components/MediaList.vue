@@ -56,6 +56,12 @@ export default {
             type: String,
             required: false,
             default: ''
+        },
+
+        slidesToShow: {
+            type: Number,
+            required: false,
+            default: 4
         }
     },
 
@@ -63,7 +69,7 @@ export default {
         return {
             carouselConfig: {
                 speed: 500,
-                slidesToShow: 4,
+                slidesToShow: this.slidesToShow,
                 slidesToScroll: 3,
                 dots: true,
                 arrows: false,

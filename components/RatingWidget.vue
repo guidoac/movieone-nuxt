@@ -1,10 +1,12 @@
 <template>
-    <div class="rounded-pill rating-wrapper d-flex flex-row align-items-center">
-        <div class="rounded-circle star-wrapper text-dark px-2 py-1 mr-2">
+    <div class="rounded-pill rating-wrapper d-flex flex-row align-items-center pr-3">
+        <div class="rounded-circle star-wrapper text-dark px-2 py-1 mr-1">
             <font-awesome-icon :icon="['fas', 'star']" />
         </div>
 
-        {{ rating }}
+        <span class="h7">
+            {{ rating }}
+        </span>
     </div>
 </template>
 
