@@ -3,7 +3,9 @@
         :variant="variant"
     >   
         <slot name="first-icon" />
+
         <slot />
+
         <slot name="second-icon" />
     </b-button>
 </template>
@@ -13,11 +15,6 @@
         name: 'BaseButton',
 
         props: {
-            label: {
-                type: String,
-                required: true
-            },
-
             variant: {
                 type: String,
                 required: false,

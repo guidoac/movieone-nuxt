@@ -3,9 +3,12 @@
         <BaseInput
             placeholder="Pesquise um filme aqui"
             class="py-2"
+            theme="black"
         >
             <template #first-icon>
-                <font-awesome-icon :icon="['fas', 'search']" />
+                <div class="mx-3">
+                    <font-awesome-icon :icon="['fas', 'search']" />
+                </div>
             </template>
         </BaseInput>
     </div>

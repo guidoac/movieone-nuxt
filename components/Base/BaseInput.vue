@@ -1,11 +1,9 @@
 <template>
     <div
         class="d-flex align-items-center rounded-xl"
-        :class="{
-            'bg-black': theme === 'default'
-        }"
+        :class="[`bg-${theme}`]"
     >   
-        <div class="mx-3 text-white">
+        <div class="text-white">
             <slot name="first-icon" />
         </div>
 
