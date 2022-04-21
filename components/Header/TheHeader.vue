@@ -37,14 +37,14 @@
             <div class="row h7">
                 <BaseButton
                    class="px-4 py-2 rounded-xl"
-                   label="Sign in"
                    variant="outline-tertiary"
-                />
+                >
+                    Sign in
+                </BaseButton>
 
-                <BaseButton
-                   class="px-4 py-2 ml-3 rounded-xl h7"
-                   label="Register"
-                />
+                <BaseButton class="px-4 py-2 ml-3 rounded-xl h7">
+                Register
+                </BaseButton>
             </div>
         </div>
     </div>

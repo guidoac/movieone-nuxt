@@ -37,10 +37,9 @@
             </div>
 
             <div class="h7 d-flex flex-row justify-content-left">
-                <BaseButton
-                    label="Watch Now"
-                    class="d-flex py-2 px-4 align-items-center mr-3"
-                >
+                <BaseButton class="d-flex py-2 px-4 align-items-center mr-3">
+                    Watch Now
+
                     <template #second-icon>
                         <font-awesome-icon
                             :icon="['far', 'play-circle']"
@@ -51,9 +50,10 @@
 
                 <BaseButton
                     variant="outline-tertiary"
-                    label="Add to Watchlist"
                     class="d-flex py-2 px-4 align-items-center"
-                />
+                >
+                    Add to Watchlist
+                </BaseButton>
             </div>
         </div>
     </template>

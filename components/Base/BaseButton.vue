@@ -3,7 +3,7 @@
         :variant="variant"
     >   
         <slot name="first-icon" />
-        {{ label }}
+        <slot />
         <slot name="second-icon" />
     </b-button>
 </template>
