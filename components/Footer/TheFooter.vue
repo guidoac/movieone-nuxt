@@ -4,7 +4,7 @@
 
         <div class="footer-container bg-contrast-secondary">
             <div class="row mx-auto w-75">
-                <div class="col-4 mr-5">
+                <div class="col-4 mr-3">
                     <TheLogo class="mb-4" />
 
                     <p class="text-tertiary">
@@ -72,7 +72,7 @@
                     </NuxtLink>
                 </div>
 
-                <div class="col-2 mr-4 h7 d-flex flex-column">
+                <div class="col-2 mr-5 h7 d-flex flex-column">
                     <p class="font-weight-semibold h6 text-white mb-4">
                         Movie Categories
                     </p>
@@ -152,8 +152,6 @@
                             </NuxtLink>
                         </div>
                     </div>
-
-                    
                 </div>
 
                 <div class="col-3 h7 p-3 message-footer rounded-3xl">
@@ -169,6 +167,18 @@
                         Get Unlimited Access
                     </BaseButton>
                 </div>
+            </div>
+        </div>
+
+        <div class="inner-footer py-3 text-tertiary">
+            <div class="w-75 mx-auto d-flex justify-content-between">
+                <span class="h7">
+                    Movie One - © 2022 All rights reserved
+                </span>
+
+                <span class="h7">
+                    Made with ❤️ by Guido
+                </span>
             </div>
         </div>
     </div>
@@ -209,5 +219,9 @@ export default {
 .message-footer {
     background: rgb(107,1,133);
     background: linear-gradient(229deg, rgba(107,1,133,1) 0%, rgba(100,10,36,1) 79%);
+}
+
+.inner-footer {
+    background-color: #00031d;
 }
 </style>
