@@ -154,7 +154,7 @@
                     </div>
                 </div>
 
-                <div class="col-3 h7 p-3 message-footer rounded-3xl">
+                <div class="col-3 h7 p-3 message-footer rounded-3xl align-self-center">
                     <p class="h6 font-weight-bold text-white">
                         Watch movie everywhere & anytime now
                     </p>

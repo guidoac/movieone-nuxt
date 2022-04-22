@@ -5,7 +5,7 @@
                 Subscribe our newsletter for newest movies updates
             </h4>
 
-            <div class="w-50 mx-auto row h6">
+            <div class="w-75 justify-content-center mx-auto row h6">
                 <BaseInput
                     class="px-3 py-2 newsletter-input mr-3"
                     placeholder="Type your email here"
