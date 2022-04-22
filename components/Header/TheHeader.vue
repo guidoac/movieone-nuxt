@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <div class="gradient-x-secondary py-2 row align-items-center">
+    <div class="gradient-x-secondary ">
+        <div class="py-2 row w-100 justify-content-center align-items-center header-container">
             <TheLogo class="ml-4 py-4" />
 
             <SearchInput class="col-3 ml-4 input-wrapper" />
@@ -94,7 +94,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .input-wrapper {
     height: min-content;
+}
+
+@media (min-width: 1200px) {
+  .header-container {
+    width: 75%;
+    margin: auto 0;
+  }
 }
 </style>
