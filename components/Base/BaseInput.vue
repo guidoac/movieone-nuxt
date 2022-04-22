@@ -47,5 +47,7 @@
 </script>
 
 <style lang="scss" scoped>
-
+input::placeholder {
+    color: white;
+}
 </style>

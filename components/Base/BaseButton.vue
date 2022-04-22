@@ -1,7 +1,5 @@
 <template>
-    <b-button
-        :variant="variant"
-    >   
+    <b-button :variant="variant">   
         <slot name="first-icon" />
 
         <slot />
