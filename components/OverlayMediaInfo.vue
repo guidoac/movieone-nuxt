@@ -88,13 +88,13 @@
                  <RatingWidget :rating="media.vote_average" />
             </div>
 
-            <PlayButton class="mt-4" />
+            <PlayButton class="mt-2" />
         </div>
     </template>
 
     <template v-else-if="type === 'extra-minified'">
         <div class="d-flex flex-column justify-content-around">
-            <div class="text-tertiary mb-1">
+            <div class="text-tertiary mb-2">
                 <h5 class="font-family-secondary text-shadow-lg">
                     {{ media.original_name || media.title }}
                 </h5>
@@ -126,7 +126,7 @@
                     :rating="media.vote_average"
                 />
 
-                <PlayButton size="sm" />
+                <PlayButton size="xs" />
             </div>
         </div>
     </template>

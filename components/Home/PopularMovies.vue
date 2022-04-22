@@ -8,9 +8,9 @@
                 Popular
             </h5>
 
-            <div class="col-12 row px-0">
+            <div class="row justify-content-center px-0">
                 <no-ssr>
-                    <div class="col-8">
+                    <div class="left-banners">
                         <div
                             class="mb-3 position-relative cursor-pointer"
                             @mouseenter="itemHovered = 0"
@@ -73,8 +73,8 @@
 
                                     <Transition name="fade">
                                         <div
-                                            v-show="itemHovered === 2"
-                                            class="rounded-3xl shadow-lg position-absolute cover-to-left top-0 z-10 h-100 w-100 p-4"
+                                            v-show="itemHovered !== 2"
+                                            class="rounded-3xl shadow-lg position-absolute cover-to-left top-0 z-10 h-100 w-100 p-3"
                                         >
                                             <OverlayMediaInfo
                                                 :media="current_popular[2]"
@@ -155,6 +155,11 @@ export default {
     z-index: 20;
     left: 5%;
     top: 15%;
+}
+
+.left-banners {
+    flex: 0 0 53%;
+    max-width: 58.33333333%;
 }
 
 .fade-enter-active,
