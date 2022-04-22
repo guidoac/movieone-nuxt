@@ -4,10 +4,6 @@
 @import "./generic.scss";
 @import "~/node_modules/vue-slick-carousel/dist/vue-slick-carousel.css";
 
-html, body, #__nuxt, #__layout, #__layout > div {
-    width: 100vw !important;
-}
-
 textarea, select, input, button {
     outline: none;
     -webkit-appearance: none;
