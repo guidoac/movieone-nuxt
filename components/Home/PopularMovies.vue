@@ -73,7 +73,7 @@
 
                                     <Transition name="fade">
                                         <div
-                                            v-show="itemHovered !== 2"
+                                            v-show="itemHovered === 2"
                                             class="rounded-3xl shadow-lg position-absolute cover-to-left top-0 z-10 h-100 w-100 p-3"
                                         >
                                             <OverlayMediaInfo
