@@ -14,7 +14,7 @@
             <div class="d-flex flex-column justify-content-between p-2 w-100">
                 <div class="bg-contrast-secondary border border-primary h8 rounded-xl py-1 px-2 genre-box">
                     <p class="mb-0 text-primary">
-                        {{ getGenre(media) }}
+                        {{ $getGenre }}
                     </p>
                 </div>
                 <div>
@@ -26,7 +26,7 @@
                         v-if="media.type === 'movie'"
                         class="text-tertiary h9 font-weight-bold mb-0"
                     >
-                        {{ getReleaseYear(media) }}
+                        {{ $getReleaseYear }}
                     </p>
 
                     <p

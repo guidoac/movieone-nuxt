@@ -145,7 +145,7 @@ export default {
     },
 
     async mounted () {
-        this.current_popular = await this.getDetails(this.random_discover_tv(this.numberOfItens));
+        this.current_popular = await this.$getDetails(this.random_discover_tv(this.numberOfItens));
     },
 }
 </script>

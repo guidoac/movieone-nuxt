@@ -8,10 +8,7 @@ export default {
             genre_by_id: 'genres/genre_by_id',
             country_by_id: 'countries/country_by_id',
             current_tv_details: 'tv/current_tv_details'
-        })
-    },
-
-    methods: {
+        }),
 
         /**
          * Extract full genre object from media object with genres_ids
@@ -19,11 +16,11 @@ export default {
          * @param {*} media 
          * @returns {string}
          */
-        getGenre (media) {
-            if (media && media.genre_ids?.length > 0) {
+         $getGenre () {
+            if (this.media && this.media.genre_ids?.length > 0) {
                 let result = {}
 
-                media.genre_ids.forEach(genre => {
+                this.media.genre_ids.forEach(genre => {
                     if (this.genre_by_id(genre)) {
                         result = this.genre_by_id(genre)
                     }
@@ -41,8 +38,8 @@ export default {
          * @param {*} media 
          * @returns {string}
          */
-        getReleaseYear (media) {
-            const date = new Date(media.first_air_date || media.release_date)
+        $getReleaseYear () {
+            const date = new Date(this.media.first_air_date || this.media.release_date)
 
             return date.getFullYear();
         },
@@ -53,15 +50,17 @@ export default {
          * @param {} media 
          * @returns {object}
          */
-        getCountry (media) {
-            if (media && media.origin_country) {
-                return this.country_by_id(media.origin_country[0])
+        $getCountry () {
+            if (this.media && this.media.origin_country) {
+                return this.country_by_id(this.media.origin_country[0])
             } else {
                 return '';
             }
         },
+    },
 
-        async getDetails (initial) {
+    methods: {
+        async $getDetails (initial) {
             if (_.isArray(initial)) {
                 const result = [];
                 

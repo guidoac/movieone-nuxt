@@ -20,11 +20,11 @@
 
                 <div class="d-flex flex-row text-tertiary justify-content-between h7">
                     <p class="font-weight-bold">
-                        {{ getGenre(media) }}
+                        {{ $getGenre }}
                     </p>
 
                     <p class="">
-                        {{ getReleaseYear(media) }}
+                        {{ $getReleaseYear }}
                     </p>
                 </div>
             </div>

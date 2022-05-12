@@ -1,6 +1,7 @@
 <template>
     <div
         class="pt-2 cursor-pointer"
+        @click="$goToMediaPage()"
         @mouseover="itemHovered = true"
         @mouseleave="itemHovered = false"
     >
@@ -25,11 +26,11 @@
                     </div>
 
                     <h6 class="text-primary font-weight-bold">
-                        {{ getGenre(media) }}
+                        {{ $getGenre }}
                     </h6>
 
                     <div class="d-flex flex-row text-dark">
-                        {{ getReleaseYear(media) }}
+                        {{ $getReleaseYear }}
                     </div>
                 </div>
             </div>

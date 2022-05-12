@@ -5,16 +5,16 @@
             <div class="d-flex flex-column text-tertiary mb-5">
                 <div class="d-flex justify-content-between mb-5 min-w-75">
                     <div class="text-primary">
-                        {{ getGenre(media) }}
+                        {{ $getGenre }}
                     </div>
 
                     <div>
-                        {{ getReleaseYear(media) }}
+                        {{ $getReleaseYear }}
                     </div>
 
-                    <template v-if="getCountry(media)">
+                    <template v-if="$getCountry">
                         <div>
-                            {{ getCountry(media).english_name }}
+                            {{ $getCountry.english_name }}
                         </div>
                     </template>
                     
