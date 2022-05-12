@@ -1,0 +1,52 @@
+<template>
+    <div class="bg-transparent py-3 text-white row h7">
+        <NuxtLink :to="{ name: 'index' }">
+            Home
+        </NuxtLink>
+        
+        &nbsp;
+        /
+        &nbsp;
+
+        <NuxtLink
+            v-for="(route, index) in paths[$route.name]"
+            :key="`path-${index}`"
+            :to="route.route"
+        >
+            {{ route.label }}
+        </NuxtLink>
+        
+        &nbsp;
+
+        <span class="opacity-50">
+             / {{ currentPage }}
+        </span>
+    </div>
+</template>
+
+<script>
+    export default {
+        name: 'TheBreadcrumb',
+
+        props: {
+            currentPage: {
+                type: String,
+                required: true
+            }
+        },
+
+        data () {
+            return {
+                paths: {
+                    'tv-id': [
+                        { label: 'TV Series', route: { name: 'tv-id' } }
+                    ]
+                }
+            }
+        }
+    }
+</script>
+
+<style scoped>
+
+</style>
