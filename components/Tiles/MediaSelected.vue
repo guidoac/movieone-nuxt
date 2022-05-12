@@ -1,51 +1,55 @@
 <template>
     <div
-        class="pt-2 cursor-pointer"
-        @click="$goToMediaPage()"
         @mouseover="itemHovered = true"
         @mouseleave="itemHovered = false"
     >
-        <template v-if="itemHovered">
-            <div class="p-3 bg-white rounded-3xl transition-all">
-                <no-ssr>
-                    <img
-                        class="rounded-3xl"
-                        :src="`${$backdrop_url}${media.poster_path}`"
-                    />
-                </no-ssr>
+        <NuxtLink
+            class="pt-2 cursor-pointer"
+            :to="$mediaPage"
+        >
+            <template v-if="itemHovered">
+                <div class="p-3 bg-white rounded-3xl transition-all">
+                    <no-ssr>
+                        <img
+                            class="rounded-3xl"
+                            :src="`${$backdrop_url}${media.poster_path}`"
+                        />
+                    </no-ssr>
 
-                <div class="mt-4 w-100">
-                    <div class="d-flex flex-row w-100 justify-content-between mb-2">
-                        <h6 class="text-black font-weight-bold mr-2 h7">
-                            {{ media.title || media.original_name }}
+                    <div class="mt-4 w-100">
+                        <div class="d-flex flex-row w-100 justify-content-between mb-2">
+                            <h6 class="text-black font-weight-bold mr-2 h7">
+                                {{ media.title || media.original_name }}
+                            </h6>
+
+                            <h6 class="text-black text-right font-weight-bold w-50">
+                                {{ randomPrice | price }}
+                            </h6>
+                        </div>
+
+                        <h6 class="text-primary font-weight-bold">
+                            {{ $getGenre }}
                         </h6>
 
-                        <h6 class="text-black text-right font-weight-bold w-50">
-                            {{ randomPrice | price }}
-                        </h6>
-                    </div>
-
-                    <h6 class="text-primary font-weight-bold">
-                        {{ $getGenre }}
-                    </h6>
-
-                    <div class="d-flex flex-row text-dark">
-                        {{ $getReleaseYear }}
+                        <div class="d-flex flex-row text-dark">
+                            {{ $getReleaseYear }}
+                        </div>
                     </div>
                 </div>
-            </div>
-        </template>
+            </template>
 
-        <template v-else>
-            <div class="px-4">
-                <no-ssr>
-                    <img
-                        class="rounded-3xl"
-                        :src="`${$backdrop_url}${media.poster_path}`"
-                    />
-                </no-ssr>
-            </div>
-        </template>
+            <template v-else>
+                <div class="px-4">
+                    <no-ssr>
+                        <img
+                            class="rounded-3xl"
+                            :src="`${$backdrop_url}${media.poster_path}`"
+                        />
+                    </no-ssr>
+                </div>
+            </template>
+        </NuxtLink>
+
     </div>
 </template>
 

@@ -1,5 +1,4 @@
 import { mapGetters } from 'vuex';
-
 import _ from 'lodash';
 
 export default {
@@ -57,6 +56,14 @@ export default {
                 return '';
             }
         },
+
+        $mediaPage () {
+            if (this.media.type === 'tv') {
+                return `/tv/${this.media.id}`
+            } else {
+                return `/movie/${this.media.id}`
+            }
+        }
     },
 
     methods: {
@@ -76,6 +83,6 @@ export default {
                     
                 return this.current_tv_details;
             }
-        }
+        },
     }
 }
