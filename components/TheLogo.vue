@@ -1,10 +1,10 @@
 <template>
-    <div>
+    <NuxtLink :to="{ name: 'index' }">
         <img
             :src="logoPath"
             class="logo"
         />
-    </div>
+    </NuxtLink>
 </template>
 
 <script>
