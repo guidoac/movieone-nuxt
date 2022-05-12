@@ -6,7 +6,11 @@
 
 <script>
     export default {
-        name: 'DetailMovie'
+        name: 'DetailMovie',
+
+        created () {
+            this.$store.dispatch('movie/fetchDetails', { id: this.$route.params.id })
+        }
     }
 </script>
 
