@@ -86,7 +86,7 @@ import RatingWidget from '~/components/RatingWidget';
             },
 
             randomPrice () {
-                return this.$utils.random(1, 100);
+                return Number(this.$utils.random(1, 100).toFixed(2));
             }
         },
 

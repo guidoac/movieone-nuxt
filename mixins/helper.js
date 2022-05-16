@@ -16,7 +16,17 @@ export default {
          * @returns {string}
          */
          $getGenre () {
-            if (this.media && this.media.genre_ids?.length > 0) {
+            if (this.media && this.media.genres?.length > 0) {
+                let result = {}
+
+                this.media.genres.forEach(genre => {
+                    if (this.genre_by_id(genre.id)) {
+                        result = this.genre_by_id(genre.id)
+                    }
+                });
+
+                return result.name;
+            } else if (this.media && this.media.genre_ids?.length > 0) {
                 let result = {}
 
                 this.media.genre_ids.forEach(genre => {

@@ -1,8 +1,10 @@
 <template>
-    <img
-        class="rounded-3xl"
-        :src="`${$poster_url}${url}`"
-    />
+    <div>
+        <img
+            class="rounded-3xl"
+            :src="`${$poster_url}${url}`"
+        />
+    </div>
 </template>
 
 <script>
