@@ -4,31 +4,31 @@
 
         <div class="footer-container bg-contrast-secondary">
             <div class="row mx-auto w-75">
-                <div class="col-4 mr-3">
-                    <TheLogo class="mb-4" />
+                <div class="col-4 me-3">
+                    <TheLogo />
 
-                    <p class="text-tertiary">
+                    <p class="text-tertiary mt-4">
                         Follow Me
                     </p>
 
                     <div class="row mx-0 text-white justify-content-between icons-social-media">
-                        <div>
+                        <div class="col-2 text-center">
                             <font-awesome-icon :icon="['fab', 'facebook-f']" />
                         </div>
 
-                        <div>
+                        <div class="col-2 text-center">
                             <font-awesome-icon :icon="['fab', 'instagram']" />
                         </div>
 
-                        <div>
+                        <div class="col-2 text-center">
                             <font-awesome-icon :icon="['fab', 'linkedin']" />
                         </div>
 
-                        <div>
+                        <div class="col-2 text-center">
                             <font-awesome-icon :icon="['fab', 'twitter']" />
                         </div>
                         
-                        <div>
+                        <div class="col-2 text-center">
                             <font-awesome-icon :icon="['fab', 'youtube']" />
                         </div>
                     </div>
@@ -72,13 +72,13 @@
                     </NuxtLink>
                 </div>
 
-                <div class="col-2 mr-5 h7 d-flex flex-column">
+                <div class="col-2 me-5 h7 d-flex flex-column">
                     <p class="font-weight-semibold h6 text-white mb-4">
                         Movie Categories
                     </p>
 
                     <div class="d-flex flex-row">
-                        <div class="d-flex flex-column mr-4">
+                        <div class="d-flex flex-column me-4">
                             <NuxtLink 
                                 class="mb-2"
                                 to="/"
@@ -155,7 +155,7 @@
                 </div>
 
                 <div class="col-3 h7 p-3 message-footer rounded-3xl align-self-center">
-                    <p class="h6 font-weight-bold text-white">
+                    <p class="h6 fw-bold text-white">
                         Watch movie everywhere & anytime now
                     </p>
 
@@ -204,8 +204,9 @@ export default {
 }
 
 .icons-social-media {
+    width: 80%;
     div {
-        padding: .5rem 1rem;
+        padding: .35rem .7rem;
         cursor: pointer;
         border-radius: .75rem;
         transition: all .3s ease;

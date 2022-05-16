@@ -20,7 +20,7 @@ a {
     transition: color .3s ease;
 
     &:hover {
-        @apply font-weight-bold;
+        @apply fw-bold;
         color: white !important;
     }
 }
@@ -30,4 +30,4 @@ ul {
 }
 
 // always import bootstrap last
-@import "~/node_modules/bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap";

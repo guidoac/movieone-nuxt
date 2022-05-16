@@ -1,7 +1,7 @@
 <template>
     <div 
         :class="[`size-${size}`]"
-        class="text-primary cursor-pointer text-left play-button w-fit"
+        class="text-primary cursor-pointer text-start play-button w-fit"
         @mouseenter="hovered = true"
         @mouseleave="hovered = false"
     >

@@ -18,16 +18,16 @@
 
                     <div class="mt-4 w-100">
                         <div class="d-flex flex-row w-100 justify-content-between mb-2">
-                            <h6 class="text-black font-weight-bold mr-2 h7">
+                            <h6 class="text-black fw-bold me-2 h7">
                                 {{ media.title || media.original_name }}
                             </h6>
 
-                            <h6 class="text-black text-right font-weight-bold w-50">
+                            <h6 class="text-black text-end fw-bold w-50">
                                 {{ randomPrice | price }}
                             </h6>
                         </div>
 
-                        <h6 class="text-primary font-weight-bold">
+                        <h6 class="text-primary fw-bold">
                             {{ $getGenre }}
                         </h6>
 

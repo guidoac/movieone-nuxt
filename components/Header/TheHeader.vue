@@ -1,15 +1,16 @@
 <template>
     <div class="gradient-x-secondary ">
         <div class="py-2 row w-100 justify-content-center align-items-center header-container">
-            <TheLogo class="ml-4 py-4" />
+            <TheLogo class=" py-4 col-2" />
 
-            <SearchInput class="col-3 ml-4 input-wrapper" />
+            <SearchInput class="col-3 input-wrapper" />
 
-            <div class="col-3 ml-3">
+            <div class="col-3">
                 <div class="row justify-content-between">
                     <div
                         v-for="(navItem, key) in navLinks"
                         :key="`nav-item-${key}`"
+                        class="col-2"
                     >
                         <NuxtLink
                             class="h7"
@@ -21,28 +22,25 @@
                 </div>
             </div>
 
-            <div class="col-1 ml-5 mr-4">
+            <div class="col-1">
                 <NuxtLink
-                    class="row align-items-center"
+                    class="d-flex flex-row align-items-center"
                     :to="{ path: '/watchlist' }"
                 >
                     <font-awesome-icon :icon="['fas', 'heart']" />
 
-                    <span class="ml-2 h7 mb-0 font-weight-bold">
+                    <span class="ms-2 h7 mb-0 fw-bold">
                         Watchlist
                     </span>
                 </NuxtLink>
             </div>
 
-            <div class="row h7">
-                <BaseButton
-                   class="px-4 py-2 rounded-xl"
-                   variant="outline-tertiary"
-                >
+            <div class="col-3 d-flex flex-row justify-content-around h7">
+                <BaseButton class="px-4 py-2 rounded-xl col-4 bg-outline-tertiary" variant="outline-tertiary">
                     Sign in
                 </BaseButton>
 
-                <BaseButton class="px-4 py-2 ml-3 rounded-xl h7">
+                <BaseButton class="px-4 py-2 rounded-xl h7 col-4">
                 Register
                 </BaseButton>
             </div>
@@ -74,10 +72,6 @@ export default {
                 {
                     title: 'Movies',
                     url: '/movies'
-                },
-                {
-                    title: 'Live',
-                    url: '/live'
                 },
                 {
                     title: 'Series',

@@ -2,7 +2,7 @@
     <div class="d-flex flex-row align-items-center">
         <font-awesome-icon
             :icon="['fas', 'thumbs-down']"
-            class="mr-2"
+            class="me-2"
         />
         {{ `${count} dislikes` }}
     </div>

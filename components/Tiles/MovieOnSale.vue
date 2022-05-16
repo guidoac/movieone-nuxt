@@ -13,13 +13,13 @@
         <div class="d-flex flex-column justify-content-between meta-info-wrapper">
             <div class="mt-4 w-100">
                 <div class="d-flex flex-row justify-content-between">
-                    <h6 class="text-white font-weight-bold mr-2 h7">
+                    <h6 class="text-white fw-bold me-2 h7">
                         {{ media.title || media.original_name }}
                     </h6>
                 </div>
 
                 <div class="d-flex flex-row text-tertiary justify-content-between h7">
-                    <p class="font-weight-bold">
+                    <p class="fw-bold">
                         {{ $getGenre }}
                     </p>
 
@@ -35,11 +35,11 @@
                     :rating="media.vote_average"
                 />
 
-                <div class="w-50 text-right">
-                    <p class="text-tertiary text-decoration-line-through text-right font-weight-bold h8 mb-0">
+                <div class="w-50 text-end">
+                    <p class="text-tertiary text-decoration-line-through text-end fw-bold h8 mb-0">
                         {{ randomPrice | price }}
                     </p>
-                    <p class="text-white text-right font-weight-bold h7 mb-0">
+                    <p class="text-white text-end fw-bold h7 mb-0">
                         {{ randomPrice | price }}
                     </p>
                 </div>

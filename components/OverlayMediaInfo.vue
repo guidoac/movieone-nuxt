@@ -28,7 +28,7 @@
                         {{ media.vote_average }}
                     </div>
                 </div>
-                <h1 class="font-family-secondary">
+                <h1 class="font-family-secondary text-cyan-200">
                     {{ media.original_name || media.title }}
                 </h1>
                 <h6 class="h7">
@@ -37,13 +37,13 @@
             </div>
 
             <div class="h7 d-flex flex-row justify-content-left">
-                <BaseButton class="d-flex py-2 px-4 align-items-center mr-3">
+                <BaseButton class="d-flex py-2 px-4 align-items-center me-3">
                     Watch Now
 
                     <template #second-icon>
                         <font-awesome-icon
                             :icon="['far', 'play-circle']"
-                            class="ml-3 h5 mb-0"
+                            class="ms-3 h5 mb-0"
                         />
                     </template>
                 </BaseButton>
@@ -66,7 +66,7 @@
                 </h2>
                 
                 <div class="h6">
-                    <span class="mr-2 font-weight-bold">
+                    <span class="me-2 fw-bold">
                         {{ media.number_of_seasons }}
                         {{
                             media.number_of_seasons > 1
@@ -100,7 +100,7 @@
                 </h5>
                 
                 <div class="h7">
-                    <span class="mr-2 font-weight-bold">
+                    <span class="me-2 fw-bold">
                         {{ media.number_of_seasons }}
                         {{
                             media.number_of_seasons > 1

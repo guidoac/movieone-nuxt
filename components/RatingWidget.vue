@@ -3,7 +3,7 @@
         :style="style"
         class="rounded-pill rating-wrapper d-flex flex-row align-items-center pr-3"
     >
-        <div class="rounded-circle star-wrapper text-dark px-2 py-1 mr-1">
+        <div class="rounded-circle star-wrapper text-dark px-2 py-1 me-1">
             <font-awesome-icon :icon="['fas', 'star']" />
         </div>
 

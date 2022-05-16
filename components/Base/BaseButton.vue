@@ -1,11 +1,11 @@
 <template>
-    <b-button :variant="variant">   
+    <button :class="[`btn btn-${variant}`]">   
         <slot name="first-icon" />
 
         <slot />
 
         <slot name="second-icon" />
-    </b-button>
+    </button>
 </template>
 
 <script>

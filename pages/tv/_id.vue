@@ -14,7 +14,7 @@
 
                 <div class="d-flex flex-row justify-content-between pb-3">
                     <div class="d-flex flex-row align-items-center">
-                        <h5 class="font-weight-bold mr-2 mb-0">
+                        <h5 class="fw-bold me-2 mb-0">
                             {{ media.original_name }}
                         </h5>
 
@@ -32,7 +32,7 @@
 
                 <div class="d-flex flex-row justify-content-between h7">
                     <div class="d-flex flex-row">
-                        <span class="mr-4">{{ `${media.number_of_seasons} Seasons` }}</span>
+                        <span class="me-4">{{ `${media.number_of_seasons} Seasons` }}</span>
                         <span>Published on {{ media.first_air_date | date }}</span>
                     </div>
 

@@ -18,30 +18,30 @@
                     </p>
                 </div>
                 <div>
-                    <p class="text-white h8 font-weight-bold mb-0">
+                    <p class="text-light h8 fw-bold mb-0">
                         {{ media.title || media.name }}
                     </p>
 
                     <p
                         v-if="media.type === 'movie'"
-                        class="text-tertiary h9 font-weight-bold mb-0"
+                        class="text-tertiary h9 fw-bold mb-0"
                     >
                         {{ $getReleaseYear }}
                     </p>
 
                     <p
                         v-else
-                        class="text-tertiary h9 font-weight-bold mb-0"
+                        class="text-muted h9 fw-bold mb-0"
                     >
                         {{ randomWatchedEpisode }}
                     </p>
                 </div>
-                <b-progress
-                    v-bind="progressBarConfig"
-                    class="bg-tertiary"
-                >
-                    <b-progress-bar :value="watchTime" />
-                </b-progress>
+                <div class="bg-tertiary progress">
+                    <div
+                        :style="{ 'width': `${watchTime}%` }"
+                        class="progress-bar"
+                    />
+                </div>
             </div>
         </div>
     </div>
@@ -60,23 +60,13 @@ import { mapGetters } from 'vuex';
             }
         },
 
-        data () {
-            return {
-                progressBarConfig: {
-                    max: 200,
-                    height: '.15rem',
-                    variant: 'primary'
-                }
-            }
-        },
-
         computed: {
             ...mapGetters({
                 current_tv_details: 'tv/current_tv_details'
             }),
             
             watchTime () {
-                return this.$utils.random(1, 200);
+                return this.$utils.random(1, 100);
             },
 
             randomWatchedEpisode () {
@@ -116,5 +106,11 @@ img {
             transform: scale(1.1)
         }
     }
+}
+
+.progress {
+    @apply bg-primary;
+
+    height: .15rem;
 }
 </style>
