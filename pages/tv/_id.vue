@@ -3,7 +3,7 @@
         v-if="media"
         class="w-75 mx-auto col"
     >
-        <TheBreadcrumb :current-page="''" />
+        <TheBreadcrumb :current-page="media.original_name" />
 
         <div class="row">
             <div class="col-8 text-white">

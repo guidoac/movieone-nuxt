@@ -36,12 +36,8 @@
                         {{ randomWatchedEpisode }}
                     </p>
                 </div>
-                <div class="bg-tertiary progress">
-                    <div
-                        :style="{ 'width': `${watchTime}%` }"
-                        class="progress-bar"
-                    />
-                </div>
+
+                <MediaWatchProgress :watch-time="watchTime"/>
             </div>
         </div>
     </div>
@@ -49,9 +45,14 @@
 
 <script>
 import { mapGetters } from 'vuex';
+import MediaWatchProgress from '~/components/MediaWatchProgress';
 
     export default {
         name: 'MediaWatching',
+
+        components: {
+            MediaWatchProgress
+        },
 
         props: {
             media: {
@@ -108,9 +109,5 @@ img {
     }
 }
 
-.progress {
-    @apply bg-primary;
 
-    height: .15rem;
-}
 </style>

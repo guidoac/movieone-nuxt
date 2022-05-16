@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-transparent py-3 text-white row h7">
+    <div class="bg-transparent py-3 text-white d-flex flex-row h7">
         <NuxtLink :to="{ name: 'index' }">
             Home
         </NuxtLink>
@@ -16,10 +16,11 @@
             {{ route.label }}
         </NuxtLink>
         
-        &nbsp;
-
-        <span class="opacity-50">
-             / {{ currentPage }}
+        &nbsp; 
+        /
+        
+        <span class="text-muted">
+            &nbsp; {{ currentPage }}
         </span>
     </div>
 </template>
